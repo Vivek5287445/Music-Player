@@ -5,20 +5,15 @@ Currently only mp3 files are supported.
 
 Import the project to eclipse IDE to edit the source code.
 
+## Author and contributors:
+
+* Vivek Kaushik
 
 ## Requirement:
 
 - Make sure JVM (Java Virtual Machine) is installed
 
-
-## Author and contributors:
-
-
-* Vivek Kaushik
-
-
 ## How to Run:
-
 
 * Open terminal and clone the project using this command
 
@@ -30,6 +25,8 @@ Import the project to eclipse IDE to edit the source code.
 
 ---
 
+### Method 1:
+
 * type `cd bin` to go to bin folder
 
 * use the command given below to run the program 
@@ -38,9 +35,7 @@ Import the project to eclipse IDE to edit the source code.
 
 ---
 
-* Open Music-Player directory
-
-* There open terminal session
+### Method 2:
 
 * and use the command
 
@@ -48,6 +43,8 @@ Import the project to eclipse IDE to edit the source code.
 
 ---
 
-* If you are using windows, then Just double click Run_MusicPlayer.bat
+### Method 3:
 
----------------------------------------------------------------------------
+* If you are using windows, then Just double click on `Run_MusicPlayer.bat`
+
+---
