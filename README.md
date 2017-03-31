@@ -10,19 +10,15 @@ Import the project to eclipse IDE to edit the source code.
 
 - Make sure JVM (Java Virtual Machine) is installed
 
----
 
 ## Author and contributors:
 
----
 
 * Vivek Kaushik
 
----
 
 ## How to Run:
 
----
 
 * Open terminal and clone the project using this command
 
