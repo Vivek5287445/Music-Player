@@ -70,6 +70,8 @@ public class Main {
 			System.out.println("\nAuthor: Vivek Kaushik");
 			System.out.println("Email: kaushikvivek.17@gmail.com");
 			System.out.println("Current Version: 2.5\n\n");
+			System.out.println("GitHub: https://github.com/Vivek5287445/Music-Player");
+			System.out.println("My GitHub Page: https://github.com/Vivek5287445/");
 			
 			System.out.println("About the program: ");
 			System.out.println("This is a Music Player program. It does what it says it does. With this, you can play \n"
