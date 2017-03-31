@@ -1,9 +1,7 @@
 # Music-Player
-Just a Music Player.
 
-Only mp3 files are supported.
-
-You can use this java program to play music from terminal.
+Just a Music Player. This is a command line music Player, you can run your music directly from terminal  
+Currently only mp3 files are supported.
 
 Import the project to eclipse IDE to edit the source code.
 
