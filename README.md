@@ -5,10 +5,8 @@ Currently only mp3 files are supported.
 
 Import the project to eclipse IDE to edit the source code.
 
----
-## Requirement:
 
----
+## Requirement:
 
 - Make sure JVM (Java Virtual Machine) is installed
 
