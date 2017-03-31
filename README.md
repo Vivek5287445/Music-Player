@@ -26,11 +26,11 @@ Import the project to eclipse IDE to edit the source code.
 
 * Extract the project
 
-* type 'cd Music-Player', Now you have three ways to run the program
+* type `cd Music-Player`, Now you have three ways to run the program
 
 ---
 
-* type 'cd bin' to go to bin folder
+* type `cd bin` to go to bin folder
 
 * use the command given below to run the program 
 
