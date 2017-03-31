@@ -29,9 +29,9 @@ public class Main {
 		while(!quit){
 			int selection;
 			
-			System.out.println("\n\n\t\tWelcome to the Music Player");
-			System.out.println("1. Play Song\t2. Pause/Play\t3. Next\t4. Previous\n"
-					+ "5. Show Playlist\t6. Add Song To Playlist\n7. Remove Song from Playlist\t8. Quit\n9.Open");
+			System.out.println("\n\n\t\tProgrammer's Music Player");
+			System.out.println("1. Play Song\t   2. Pause/Play\t    3. Next\t      4. Previous\n"
+					+ "5. Show Playlist\t    6. Add Song To Playlist\t  7. Remove Song from Playlist\n8. Quit\t  9. About\n");
 			System.out.println("\nEnter Your Selection:");
 			try{
 			selection = Integer.parseInt(scanner.nextLine());
@@ -55,9 +55,10 @@ public class Main {
 			case 7: removeFromPlaylist();
 					break;
 			case 8: quit = true;
+					myPlayer.stop();
 					System.out.println("Music Player Stopped successfully.");
 					break;
-			case 9: openFile();
+			case 9: aboutAuthor();
 					break;
 			default: System.out.println("Invalid Selection");
 			}
@@ -65,24 +66,40 @@ public class Main {
 		
 	}
 	
-	public static void openFile(){
-//
-//		JFileChooser fileChooser = new JFileChooser();
-//		int result = fileChooser.showOpenDialog(null);
-//		File selectedFile = fileChooser.getSelectedFile();
-//		
-		song = new MP3(fileChooserMethod());
-		System.out.println("Now Playing: "+fileChooserMethod());
-		song.play();
+	public static void aboutAuthor(){
+			System.out.println("\nAuthor: Vivek Kaushik");
+			System.out.println("Email: kaushikvivek.17@gmail.com");
+			System.out.println("Current Version: 2.5\n\n");
+			
+			System.out.println("About the program: ");
+			System.out.println("This is a Music Player program. It does what it says it does. With this, you can play \n"
+					+ "music right from Command Prompt or a Terminal. Which by the way looks so cool. Currently you can\n"
+					+ "play only mp3 files but I think I will add the codecs for other format as well(at least I hope so).\n"
+					+ "So please enjoy the program I think you will like it. And did I tell how cool it is to play music using\n"
+					+ "terminal, Yup I did. You can also check out my blog \"techtrickswithvk.blogspot.com\".\n");
+			
+			System.out.println("\nWhat's New: \n");
+			
+			System.out.println("version 2.5:\n- Some Major Bug Fixes.\n- Fixed the issue of dual music playback\n"
+					+ "- Some Minor Bug Fixes\n- Fixed the issue where program does not terminate while music is playing.\n");
+			
+			System.out.println("version 2.0:\n- Major Bug Fixes.\n- Added the ability to go to next and previous song.\n"
+					+ "- Added Playlist Functionality.\n- Added file selection functionality.\n");
+			
+			System.out.println("version 1.0:\n- Added control functions.\n- Bug Fixes.");
+			
 	}
-	
 	public static void playSong(){
 		
 		myPlayer.showPlaylist();
 		System.out.println("Enter Song Number from Playlist:");
+	
+		try{
 		int indexNumber = Integer.parseInt(scanner.nextLine());
-		
 		myPlayer.playMusic(myPlayer.getSongName(indexNumber-1));
+		}catch(NumberFormatException e){
+			System.out.println("Invalid song"+e);
+		}
 	}
 	
 	public static void pause_Play(){

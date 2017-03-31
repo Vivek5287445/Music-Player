@@ -11,27 +11,36 @@ public class MusicPlayer implements IMusicPlayer{
 	Playlist myPlaylist = new Playlist();
 	
 	
+	JFileChooser fileChooser = new JFileChooser();
+	File selectedFile = fileChooser.getSelectedFile();
+	
 	public String fileChooserMethod(){
 		String fileName;
-		JFileChooser fileChooser = new JFileChooser();
-		int result = fileChooser.showOpenDialog(null);
-		File selectedFile = fileChooser.getSelectedFile();
+	
+		fileChooser.showOpenDialog(null);
+		
 		fileName = selectedFile.getAbsolutePath();
 		return fileName;
 	}
 
 	@Override
 	public boolean playMusic(String song) {
-		if(myPlaylist.containSong(song)){
-			musicPlaying = true;
-			myPlaylist.setNowPlaying(song);
-			newMusicPlayer.setFileName(song);
-			newMusicPlayer.play();
-			System.out.println("Now playing: "+myPlaylist.getNowPlaying()+".");
-			return true;
+		if(!musicPlaying){
+			if(myPlaylist.containSong(song)){
+				musicPlaying = true;
+				myPlaylist.setNowPlaying(song);
+				newMusicPlayer.setFileName(song);
+				newMusicPlayer.play();
+				System.out.println("Now playing: "+myPlaylist.getNowPlaying()+".\n");
+				return true;
+			}
+		}else if(musicPlaying){
+			System.out.println("Pausing current Music.\n");
+			pause();
+			playMusic(song);
+			
 		}
-		
-		System.out.println("Song is not listed in the playlist.");
+		System.out.println("Song is not listed in the playlist.\n");
 		return false;
 	}
 
@@ -105,7 +114,7 @@ public class MusicPlayer implements IMusicPlayer{
 	public boolean stop() {
 		if(musicPlaying){
 		musicPlaying = false;
-		
+		newMusicPlayer.close();
 		System.out.println("Music is now stopped.");
 		
 		myPlaylist.setNowPlaying("");
@@ -113,7 +122,7 @@ public class MusicPlayer implements IMusicPlayer{
 		return true;
 		}
 		
-		System.out.println("Music is already Stopped.");
+		System.out.println("Music is not playing.");
 		return false;
 	}
 
