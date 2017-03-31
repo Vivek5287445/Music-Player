@@ -1,8 +1,7 @@
 # Music-Player
-Just a Music Player
+Just a Music Player.
 
-
-You can use this java program to play music from terminal
+You can use this java program to play music from terminal.
 
 Import the project to eclipse IDE to edit the source code.
 
