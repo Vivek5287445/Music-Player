@@ -1,5 +1,8 @@
 # Music-Player
 
+![programmer smusicplayer](https://cloud.githubusercontent.com/assets/10868176/24889242/80cd16f4-1e86-11e7-972b-3608bcabbda8.JPG)
+
+
 Just a Music Player. This is a command line music Player, you can run your music directly from terminal  
 Currently only mp3 files are supported.
 
